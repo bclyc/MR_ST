@@ -1,0 +1,334 @@
+@media screen and (min-width: 1400px){
+	html
+	{
+		min-width:1430px;
+	}
+}
+@media screen and (max-width: 1400px){
+	html
+	{
+		min-width:1130px;
+	}
+}
+
+body
+{
+	min-height: 100%;
+	min-width: 100%;
+	margin:0;
+	font-size:1.2em;
+	font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,STHeiti,"Microsoft Yahei",sans-serif;
+	-webkit-font-smoothing:antialiased;
+	background:#f6f6f6;
+	color:#333;
+	
+	overflow:auto;
+	
+	
+}
+
+h2
+{
+	font-size:1.8em;
+	margin:5px 0 5px 0;
+}
+
+h2.left {
+    color: #404040;
+    background-color: #fff;
+    font-size: 90%;
+    margin-bottom: 4px;
+    padding-bottom: 0;
+    margin-top: 10px;
+    padding-top: 0;
+    font-weight: 700;
+}
+
+ul.errorMessage
+{
+	color: #FF3300;
+	list-style-type: none;
+	display: inline;
+	margin: 0px;
+	padding: 3px;
+}
+
+ul.errorMessage li 
+{
+	list-style-type: none;
+	display: inline;
+}
+
+.topbar
+{
+	margin:0;
+	width:100%;
+	height:80px;
+	
+	
+}
+
+.logo img
+{
+	
+	margin:5px 0 0 5%;
+	height:60px;
+	width:calc(height);
+	
+}
+
+.userInfo
+{
+	height:100%;
+	width:350px;
+	float:right;
+	margin-right:20%;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.userInfo h5
+{
+	display:inline;	
+}
+
+.topsecbar
+{
+	margin:0;
+	width:100%;
+	height:35px;
+	
+	background:#555;
+}
+
+.mainbody{
+	width:100%;
+	
+	min-height:85%;	
+	height:85%;	
+	height:auto;
+	
+	overflow:auto;
+}
+
+.row
+{
+	width:100%;
+	height:100%;
+	max-width:1640px;
+	min-width:755px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+.left-navbar
+{
+	float:left;
+	height:100%;
+	margin:0 5px 0 20px;
+	
+	
+	overflow:hidden;
+}
+.right-main-body
+{
+	background:#fff;	
+	border:1px solid #efefef;
+	border-bottom:0;
+	
+	margin:0 20px;
+	padding:10px 10px 10px 30px;
+	
+	float:left;
+	width:60%;
+	
+	height:500px;
+	min-height:500px;
+	height:auto;
+	min-width:1080px;
+	
+}
+.mainleft
+{
+	width:65%;
+	height:100%;
+	float:left;
+}
+.mainright
+{
+	width:35%;
+	height:100%;
+	float:left;
+	word-break:break-all;
+}
+.mainright p
+{
+	font-size:18px;
+	margin:8px 0;
+}
+
+.navbar-box
+{
+	
+	
+	background:#fff;
+	margin:0 0 20px 0;
+	padding:4px;
+	-moz-box-shadow:0 1px 1px 0 rgba(0,0,0,.1);
+	-webkit-box-shadow:0 1px 1px 0 rgba(0,0,0,.1);
+	box-shadow:0 1px 1px 0 rgba(0,0,0,.1);
+	
+	overflow:hidden;
+}
+
+.navbar
+{
+	padding:4px;
+	width:150px;
+	overflow:hidden;
+	
+}
+
+
+
+.navbar a
+{
+	background-color:#f6f4f0;
+	text-decoration:none;
+	display:block;
+	padding:4px;
+	border-bottom:1px solid #efefef;
+	color:#000;
+	
+}
+
+.navbar a:nth-child(even)
+{
+	background:#fbfbfb;
+	border-top:1px solid #efefef;
+	border-bottom:1px solid #efefef;
+}
+
+.tableref
+{
+	max-width:100%;
+	
+}
+
+.tableref tr
+{
+	align="center";
+}
+
+.tableref tr th
+{
+	color:#fff;
+	background-color:#555;
+	border:1px solid #555;
+	font-size:16px;
+	padding:3px;
+	vertical-align:top;
+	text-align:left;
+	
+}
+
+.tableref tr td
+{
+	
+	border:1px solid #d4d4d4;
+	font-size:14px;
+	padding:5px;
+	padding-top:7px;
+	padding-bottom:7px;
+	vertical-align:middle;
+	
+}
+
+.tableref tr:nth-child(2n+1) {
+	/*
+    background-color: #eee;
+	*/
+}
+
+.input_tableref tr td
+{
+	padding:5px;
+}
+
+.tableref tr .id-cell
+{
+	max-width:55px;
+		
+}
+
+.tableref tr .name-cell
+{
+	max-width:45px;
+	min-width:45px;
+	
+}
+
+.tableref tr .step-cell
+{
+	min-width:700px;
+	height:100px;
+	padding-left:15px;
+}
+
+.tableref tr .note-cell
+{
+	width:100px;	
+	
+}
+
+
+.btn:hover
+{
+	background-color:#fff;
+	color:#90b575
+}
+
+.btn
+{
+	display:inline-block;
+	color:#FFF;background-color:#8ac007;
+	font-weight:700;
+	font-size:16px;
+	text-align:center;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:3px;
+	padding-bottom:4px;
+	text-decoration:none;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:5px;
+	border:1px solid #aaa;
+	border-radius:5px;
+	white-space:nowrap;
+}
+
+.login
+{
+	background:#FFF;
+	border:2px solid #000;
+	width:500px;	
+	height:300px;	
+	margin:100px auto;
+	
+	position:relative;		
+}
+
+.left-column {
+	display: none;
+}
+
+.fix-div{ 
+	position:fixed ;
+	bottom:0px;
+	
+	background:#FFF;
+	border:1px solid #efefef;	
+}

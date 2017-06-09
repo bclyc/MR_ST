@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.i18n.encoding" value="GBK"/>
+	 <constant name="struts.multipart.maxSize" value="100000000"/>
+	
+	<package name="user" extends="struts-default">
+		<action name="Login">
+			<result>/login.jsp</result>
+		</action>
+		
+		<action name="LoginCheck" class="action.LoginCheck">
+			<result name="1">/admin/admin_proj.jsp</result>
+			<result name="2">/pm/pm.jsp</result>
+			<result name="3">/local/local.jsp</result>
+			<result name="4">/staff/staff.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+		
+		<action name="NewProject" class="action.NewProject">
+			<result name="success">/local/local.jsp</result>
+			<result name="input">
+				<param name="location">/local/newproject.jsp</param>	            
+	            <param name="sid">${param.sid}</param> 
+	        </result>
+		</action>
+		
+		<action name="Upload" class="action.UploadAction">  
+                <!-- 可以更改fileUpload拦截器的属性值来限定上传文件的内容类型，上传文件的大小 -->  
+        <interceptor-ref name="defaultStack">  
+        	<param name="fileUpload.maximumSize">10240000</param>  
+            <param name="fileUpload.allowedTypes">image/png,image/gif,image/jpeg,image/jpg,image/x-png, image/pjpeg</param>                
+        </interceptor-ref>              
+             <result name="succ">
+             	 <param name="location">/local/upload.jsp</param>
+	             <param name="projectId">${param.projectId}</param> 
+	             <param name="sid">${param.sid}</param> 
+	         </result> 
+             <result name="input">
+	             <param name="location">/local/upload.jsp</param>
+	             <param name="projectId">${param.projectId}</param>
+	             <param name="sid">${param.sid}</param> 
+             </result>  
+        </action>  
+        
+        <action name="UploadMarked" class="action.UploadAction">  
+                <!-- 可以更改fileUpload拦截器的属性值来限定上传文件的内容类型，上传文件的大小 -->  
+        <interceptor-ref name="defaultStack">  
+        	<param name="fileUpload.maximumSize">10240000</param>  
+            <param name="fileUpload.allowedTypes">image/png,image/gif,image/jpeg,image/jpg,image/x-png, image/pjpeg</param>                
+        </interceptor-ref>              
+             <result name="succ">
+             	 <param name="location">/local/upload_marked.jsp</param>
+	             <param name="projectId">${param.projectId}</param>
+	             <param name="sid">${param.sid}</param>  
+	         </result>
+	         <result name="succ1">
+             	 <param name="location">/local/upload_marked.jsp</param>
+	             <param name="projectId">${param.projectId}</param>
+	             <param name="sid">${param.sid}</param>  
+	         </result> 
+             <result name="input">
+	             <param name="location">/local/upload_marked.jsp</param>
+	             <param name="projectId">${param.projectId}</param>
+	             <param name="sid">${param.sid}</param> 
+             </result> 
+              
+        </action> 
+        
+        <action name="UploadVideo" class="action.UploadAction">                        
+             <result name="succ">
+             	 <param name="location">/local/upload_video.jsp</param>
+	             <param name="projectId">${param.projectId}</param>
+	             <param name="sid">${param.sid}</param>  
+	         </result> 
+             <result name="input">
+	             <param name="location">/local/upload_video.jsp</param>
+	             <param name="projectId">${param.projectId}</param>
+	             <param name="sid">${param.sid}</param> 
+             </result>  
+        </action>
+        
+        <action name="UploadConf" class="action.UploadAction">  
+                <!-- 可以更改fileUpload拦截器的属性值来限定上传文件的内容类型，上传文件的大小 -->  
+        <interceptor-ref name="defaultStack">  
+        	<param name="fileUpload.maximumSize">15600000</param>                
+        </interceptor-ref>              
+             <result name="succ">
+             	 <param name="location">/staff/upload_conf.jsp</param> 
+	             <param name="includeProperties">finFlag</param> 
+	         </result> 
+             <result name="input">
+	             <param name="location">/staff/upload_conf.jsp</param>
+	             
+             </result>  
+        </action>
+        
+        <action name="UploadResult" class="action.UploadAction">  
+                <!-- 可以更改fileUpload拦截器的属性值来限定上传文件的内容类型，上传文件的大小 -->  
+        <interceptor-ref name="defaultStack">  
+        	<param name="fileUpload.maximumSize">51200000</param>                
+        </interceptor-ref>              
+             <result name="succ">
+             	 <param name="location">/admin/upload_result.jsp</param> 
+	             <param name="includeProperties">finFlag</param> 
+	         </result> 
+             <result name="input">
+	             <param name="location">/admin/upload_result.jsp</param>	             
+             </result>  
+        </action>
+        
+        <action name="UploadMarkedCanvas" class="action.UploadAction">                             
+             <result name="succ">/local/upload_marked.jsp</result>
+			
+			<result name="input">/local/upload_marked.jsp</result> 
+        </action>
+        
+        <action name="UploadMarkedPosition" class="action.UploadAction">                             
+             <result name="succ">/local/upload_marked.jsp</result>
+			
+			<result name="input">/local/upload_marked.jsp</result> 
+        </action>
+        
+        <action name="UploadFine" class="action.UploadAction">                             
+             <result name="succ">/local/upload_fine_modeling.jsp</result>
+			
+			<result name="input">/local/upload_fine_modeling.jsp</result> 
+        </action>
+        
+        <action name="NewUser" class="action.NewUser">
+			<result name="success">/admin/admin_user.jsp</result>
+			<result name="input">
+				<param name="location">/admin/new_user.jsp</param>
+            </result>             
+        </action>
+        
+        <action name="STMarkUpload" class="action.STMarkUpload">  
+                <!-- 可以更改fileUpload拦截器的属性值来限定上传文件的内容类型，上传文件的大小 -->  
+        <interceptor-ref name="defaultStack">  
+        	<param name="fileUpload.maximumSize">5120000</param>                
+        </interceptor-ref>              
+             <result name="succ">
+             	 <param name="location">/login.jsp</param>  
+	         </result> 
+             <result name="input">
+	             <param name="location">/login.jsp</param>
+	             
+             </result>  
+        </action>
+        
+        
+	</package>
+</struts>    
